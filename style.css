@@ -1,0 +1,138 @@
+body {
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+  }
+  html,body {
+    height: 400px;
+    margin: 0;
+    overflow: hidden;
+  }
+  .info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  .wrapper .game {
+    position: relative;
+    margin: 0 auto;
+    width: 1000px;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 400px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  
+  .wrapper .game::-webkit-scrollbar { 
+    display: none; 
+  }
+  
+  .parallax-container {
+    display: flex;
+    flex: 1 0 auto;
+    position: relative;
+    height: 100%;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+  }
+  
+  .layers {
+    position: relative;
+    height: 100%;
+  }
+  
+  #layer-one {
+    display: block;
+    position: relative;
+  
+    left: 0;
+    height: 100%;
+    width: 100000px;
+    background-image: linear-gradient(#144d99, #0081CF 300px, #444443 300px);
+  }
+  #layer-two {
+    position: absolute;
+    top: 200px;
+    left: 0;
+    z-index: 10;
+    height: 100px;
+    width: 100000px;
+  }
+  
+  #layer-three {
+    position: absolute;
+    top: 325px;
+    left: 1000px;
+    z-index: 20;
+    height: 100px;
+    width: 100000px;
+  }
+  
+  .clouds {
+    filter: blur(1px);
+    opacity: 0.95;
+  }
+  
+  .clouds, .buildings {
+    display: inline-block;
+    height: 100%;
+    width: 600px;
+  }
+  
+  .buildings {
+    float: left;
+    display: block;
+    height: 100%;
+    width: 300px;
+  }
+  
+  
+  #player-container {
+    position: fixed;
+    bottom: 0;
+    left: 100px;
+    transform: translateZ(-100px) translateY(11000px) translateX(-25000px) scale(100);
+    z-index: 30;
+  }
+  .start-message {
+    position: fixed;
+    top: 0;
+    left: calc(50% - 500px);
+    
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    
+    margin: 0 auto;
+    width: 1000px;
+  
+    color: white;
+    font-family: 'Helvetica';
+    font-size: 2em;
+    font-weight: bold;
+  
+    background-color: #00e6b8;
+  }
+  
+  .fade-out {
+    animation: fadeOut 1s linear;
+    opacity: 0;
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
